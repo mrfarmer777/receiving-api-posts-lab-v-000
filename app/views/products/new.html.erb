@@ -27,6 +27,7 @@
       var inputs=$(this).serialize();
       var creatingProduct=$.post("/products",inputs);
       creatingProduct.done(function(data){
+        console.log(data)
         $("#product-name").text(data["name"])
         $("#product-description").text(data["description"])
         $("#product-price").text(data["price"])
