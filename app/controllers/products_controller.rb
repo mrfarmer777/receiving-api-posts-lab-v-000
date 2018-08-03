@@ -19,6 +19,7 @@ class ProductsController < ApplicationController
 
   def create
     Product.create(product_params)
+    #give back some json, because we're creating it with AJAX
     render json: @product, status: 201
   end
 
